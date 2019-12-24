@@ -2,7 +2,7 @@
 
 # Google Fit Sensor Component
 
-100% based and copied from:
+Based on, with small fixes:
 
 - <https://github.com/zewelor/ha_custom_components/tree/master/google_fit>
 - <https://github.com/hemantkamalakar/haconfigs/tree/master/custom_components/google_fit>
@@ -21,6 +21,14 @@ At the moment, provides following measurements:
 - heartrate
 
 Sensor is designed to be flexible and allow customization to add New Google Fit dimensions with minimal effort with relative knowledge of Python and Fitness Rest API.
+
+## HACS - Recommended
+- Have [HACS](https://hacs.xyz) installed, this will allow you to easily update.
+- Add `https://github.com/cyberjunky/home-assistant-google_fit` as a [custom repository](https://hacs.xyz/docs/navigation/repository) with Type: Integration
+- Click Install under "Google Fit" integration.
+- Restart Home-Assistant.
+
+## Manual
 
 ## Example configuration.yaml
 
