@@ -22,6 +22,8 @@ At the moment, provides following measurements:
 
 Sensor is designed to be flexible and allow customization to add New Google Fit dimensions with minimal effort with relative knowledge of Python and Fitness Rest API.
 
+# Installation
+
 ## HACS - Recommended
 - Have [HACS](https://hacs.xyz) installed, this will allow you to easily update.
 - Add `https://github.com/cyberjunky/home-assistant-google_fit` as a [custom repository](https://hacs.xyz/docs/navigation/repository) with Type: Integration
@@ -29,6 +31,9 @@ Sensor is designed to be flexible and allow customization to add New Google Fit 
 - Restart Home-Assistant.
 
 ## Manual
+- Copy directory `custom_components/google_fit` to your `<config dir>/custom_components` directory.
+- Configure.
+- Restart Home-Assistant.
 
 ## Example configuration.yaml
 
