@@ -1,46 +1,3 @@
-"""Creates Google Fit sensors.
-At the moment, provides following measurements:
-    - steps
-    - distance
-    - time
-    - calories
-    - weight
-    - height
-    - sleep
-    - heartrate
-
-Sensor is designed to be flexible and allow customization to add new Google Fit
-dimensions with minimal effort with relative knowledge of Python and Fitness
-Rest API.
-
-In order to add this component as is, add a new sensor:
-
-sensor:
-  - platform: google_fit
-    name: Google Fit
-    client_id: your_client_id
-    client_secret: your_client_secret
-
-In order to generate your client_id and client_secret, see the prerequisites
-for Google Calender component:
-https://www.home-assistant.io/components/calendar.google/#prerequisites
-
-To make sensor work you have to enable Fintness API in your project.
-In oder to enable Fitness API open Google cloud console: 
-https://console.cloud.google.com/apis/library/fitness.googleapis.com
-and enable API.
-
-It is recommendable to store client_id and client_secret as secret as
-possible. You can read about it on:
-https://www.home-assistant.io/docs/configuration/secrets/
-
-Example:
-  - platform: google_fit
-    name: Bob
-    client_id: !secret google_fit_client_id
-    client_secret: !secret google_fit_client_secret
-"""
-
 import logging
 import os
 import time
@@ -447,6 +404,9 @@ class GoogleFitHeightSensor(GoogleFitSensor):
 
 
 class GoogleFitHeartRateSensor(GoogleFitSensor):
+    DATA_SOURCE = "derived:com.google.heart_rate.bpm:com.google.android.gms:" \
+                  "merge_heart_rate_bpm"
+
     @property
     def unit_of_measurement(self):
         """Returns the unit of measurement."""
@@ -691,18 +651,8 @@ class GoogleFitSleepSensor(GoogleFitSensor):
             total_deep_sleep = sum(deep_sleep,timedelta())
             total_light_sleep = sum(light_sleep, timedelta())
             state_dict = dict({'bed_time': str(bed_time), 'wake_up_time': str(wake_up_time), 'sleep': str(total_sleep), 'deep_sleep': str(total_deep_sleep), 'light_sleep': str(total_light_sleep)})
-            # data = {'bed_time': str(bed_time), 'wake_up_time': str(wake_up_time), 'sleep': str(total_sleep)}
-            # json_data = json.dumps(data)
-            # print("Bed time: ", bed_time)
-            # print("Wake up time: ", wake_up_time)
-            # print("Sleep: ", total_sleep)
-            # print("Deep sleep: ", total_deep_sleep )
-            # print("Light sleep: ", total_light_sleep )
-            #print(state_dict)
-            
             self._state = str(total_sleep)
             self._attributes = state_dict
-            #self._sleep = json_data
             self._last_updated = time.time()
         else:    
             self._state = ""
