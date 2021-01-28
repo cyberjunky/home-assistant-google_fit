@@ -67,3 +67,14 @@ Example:
     client_id: !secret google_fit_client_id
     client_secret: !secret google_fit_client_secret
 ```
+
+## Debugging
+
+Add the relevant lines below to the `configuration.yaml`:
+
+```yaml
+logger:
+  default: info
+  logs:
+    custom_components.google_fit: debug
+```
