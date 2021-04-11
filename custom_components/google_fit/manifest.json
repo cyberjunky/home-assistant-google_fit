@@ -1,6 +1,7 @@
 {
   "domain": "google_fit",
   "name": "Google Fit",
+   "version": "1.0.4",
   "documentation": "https://github.com/cyberjunky/home-assistant-google_fit",
   "dependencies": [],
   "codeowners": [
