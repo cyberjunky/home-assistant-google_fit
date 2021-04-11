@@ -28,8 +28,8 @@ CONF_CLIENT_SECRET = 'client_secret'
 DEFAULT_NAME = 'Google Fit'
 DEFAULT_CREDENTIALS_FILE = '.google_fit.credentials.json'
 ICON = 'mdi:heart-pulse'
-MIN_TIME_BETWEEN_SCANS = timedelta(minutes=10)
-MIN_TIME_BETWEEN_UPDATES = timedelta(minutes=10)
+MIN_TIME_BETWEEN_SCANS = timedelta(minutes=30)
+MIN_TIME_BETWEEN_UPDATES = timedelta(minutes=30)
 TOKEN_FILE = '.{}.token'.format(SENSOR)
 SENSOR_NAME = '{} {}'
 
