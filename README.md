@@ -9,7 +9,7 @@ Based on, with small fixes:
 - <https://github.com/vmanuel/hacs-google-fit>
 
 Creates Google Fit sensors.
-At the moment, provides following measurements:
+At the moment, the component provides following measurements:
 
 - steps
 - distance
@@ -20,7 +20,7 @@ At the moment, provides following measurements:
 - sleep
 - heartrate
 
-Sensor is designed to be flexible and allow customization to add New Google Fit dimensions with minimal effort with relative knowledge of Python and Fitness Rest API.
+The sensors are designed to be flexible and allow customization to add new Google Fit dimensions with minimal effort with relative knowledge of Python and the Fitness Rest API.
 
 # Installation
 
@@ -49,14 +49,14 @@ sensor:
 
 ## Client ID and Client Secret
 
-In order to generate your client_id and client_secret, see the prerequisites for Google Calender component:
+In order to generate your `client_id` and `client_secret`, see the prerequisites for the Google Calendar component:
 <https://www.home-assistant.io/components/calendar.google/#prerequisites>
-To make sensor work you have to enable Fintness API in your project.
-In oder to enable Fitness API open Google cloud console: 
+To make sensor work you have to enable the Fitness API in your project.
+In oder to enable Fitness API open Google Cloud console: 
 <https://console.cloud.google.com/apis/library/fitness.googleapis.com>
 and enable API.
 
-It is recommendable to store client_id and client_secret as secret as possible. You can read about it on:
+It is recommendable to store the `client_id` and `client_secret` as securely as possible. You can read about it on:
 <https://www.home-assistant.io/docs/configuration/secrets/>
 
 Example:
