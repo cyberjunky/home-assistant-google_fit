@@ -68,6 +68,13 @@ Example:
     client_secret: !secret google_fit_client_secret
 ```
 
+## FAQ
+
+If you have issues authenticating or setup try this workaround first:
+
+Set your HA timezone to Etc/UTC then restart HA. You'll get a notification to Authenticate. Once the Auth with Google is complete, you can change your timezone back and restart.
+
+
 ## Debugging
 
 Add the relevant lines below to the `configuration.yaml`:
