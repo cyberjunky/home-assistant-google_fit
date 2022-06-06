@@ -67,7 +67,9 @@ HEARTRATE = 'heart rate'
 SCOPES = ['https://www.googleapis.com/auth/fitness.body.read',
     'https://www.googleapis.com/auth/fitness.body.write',
     'https://www.googleapis.com/auth/fitness.activity.read',
-    'https://www.googleapis.com/auth/fitness.location.read']
+    'https://www.googleapis.com/auth/fitness.location.read',
+    'https://www.googleapis.com/auth/fitness.sleep.read',
+    'https://www.googleapis.com/auth/fitness.heart_rate.read']
 
 def _today_dataset_start():
     today = datetime.today().date()
