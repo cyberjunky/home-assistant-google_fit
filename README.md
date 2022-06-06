@@ -72,7 +72,7 @@ Example:
 
 If you have issues authenticating or setup try this workaround first:
 
-Set your HA timezone to Etc/UTC then restart HA. You'll get a notification to Authenticate. Once the Auth with Google is complete, you can change your timezone back and restart.
+Set your HA timezone to (GMT+00:00) GMT (no daylight saving) then restart HA. You'll get a notification to Authenticate. Once the Auth with Google is complete, you can change your timezone back and restart.
 
 
 ## Debugging
