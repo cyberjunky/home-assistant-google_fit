@@ -1,5 +1,10 @@
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)  [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/cyberjunkynl/)
 
+
+# NOTE: deprecated!
+This integration is not maintained for Years, I suggest looking at this one:
+https://github.com/YorkshireIoT/ha-google-fit
+
 # Google Fit Sensor Component
 
 Based on, with small fixes:
